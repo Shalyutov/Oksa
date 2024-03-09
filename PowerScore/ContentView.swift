@@ -9,51 +9,58 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.scoreboard) private var scoreboard
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+                NavigationLink {
+                    CountriesView()
+                } label: {
+                    Label("Страны", systemImage: "globe")
                 }
-                .onDelete(perform: deleteItems)
+                NavigationLink {
+                    ParticipantsView()
+                } label: {
+                    Label("Участники", systemImage: "person")
+                }
+                NavigationLink {
+                    VotingView()
+                } label: {
+                    Label("Голосование", systemImage: "rectangle.stack")
+                }
+                NavigationLink {
+                    OrderView()
+                } label: {
+                    Label("Порядок", systemImage: "list.clipboard")
+                }
             }
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
             .toolbar {
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: {
+                        openWindow(id: "voting")
+                    }) {
+                        Label("Запустить", systemImage: "play")
+                    }
+                }
+                ToolbarItem {
+                    Button(action: {
+                        scoreboard.countries.removeAll()
+                        scoreboard.participants.removeAll()
+                        scoreboard.votes.removeAll()
+                        scoreboard.order.removeAll()
+                    }) {
+                        Label("Очистить", systemImage: "trash")
                     }
                 }
             }
         } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

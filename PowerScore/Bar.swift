@@ -13,9 +13,9 @@ struct Bar : View {
     var body: some View {
         Rectangle()
             .fill(
-                LinearGradient(colors: [.blue, .yellow, .blue], startPoint: UnitPoint(x: CGFloat(0), y: CGFloat(-0.3+animateGradient)), endPoint: UnitPoint(x: CGFloat(0), y: CGFloat(1.3+animateGradient)))
+                LinearGradient(colors: [.blue, .mint, .blue], startPoint: UnitPoint(x: CGFloat(0), y: CGFloat(-0.3+animateGradient)), endPoint: UnitPoint(x: CGFloat(0), y: CGFloat(1.3+animateGradient)))
             )
-            .frame(width: 60)
+            .frame(width: 70)
             .onAppear {
                 withAnimation(.linear(duration: 3.0-Double(index)*0.0999).delay(Double(index)*0.1).repeatForever(autoreverses: false)){
                     animateGradient = -1.3

@@ -9,37 +9,85 @@ import SwiftUI
 import SwiftData
 
 struct CountriesView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var countries: [Country]
-    @State private var country : String = ""
-    @State private var selected : Country?
+    @Environment(\.scoreboard) private var scoreboard
+    @State private var isEditing = false
+    @State private var selection : Country? = nil
     
     var body: some View {
         VStack {
-            List(countries, selection: $selected) { country in
-                Text(country.name)
+            List(selection: $selection) {
+                ForEach(scoreboard.countries, id: \.self) { country in
+                    HStack{
+                        CountryFlag(name: country.name)
+                            .frame(height: 20)
+                            .padding(4)
+                        Text(country.name)
+                            .font(.title3)
+                            .padding(4)
+                    }
+                }
             }
-            
-            HStack{
-                TextField("", text: $country)
+            .sheet(isPresented: $isEditing){
+                if let selection{
+                    CountryEditor(country: selection)
+                }
+                else {
+                    CountryEditor(country: nil)
+                }
+            }
+            .toolbar{
+                Button(action: addTemplate){
+                    Label("Шаблон", systemImage: "wand.and.stars")
+                }
                 Button(action: addCountry){
                     Label("Добавить", systemImage: "plus")
                 }
-                .labelStyle(.iconOnly)
+                if selection != nil {
+                    Button(action: {isEditing = true}){
+                        Label("Изменить", systemImage: "pencil")
+                    }
+                    Button(action: deleteCountry){
+                        Label("Удалить", systemImage: "trash")
+                    }
+                }
             }
+            
         }
         .padding(8)
     }
     private func addCountry(){
-        withAnimation {
-            let newCountry = Country(name: country)
-            modelContext.insert(newCountry)
+        selection = nil
+        isEditing = true
+    }
+    private func addTemplate(){
+        let countries = ["Россия", "Китай", "Бразилия", "Турция", "Сербия", "ЮАР", "Казахстан", "Узбекистан", "Таджикистан", "Украина", "Беларусь", "Бельгия", "Нидерланды", "Франция", "Великобритания", "Дания", "Германия", "Швеция", "Польша"]
+        let marks = [12, 10, 8, 7, 6, 5, 4, 3, 2, 1]
+        for country in countries {
+            let _country = Country(name: country)
+            scoreboard.countries.append(_country)
+            let participant = Participant(Number: 0, Song: "", Performer: "", Country: _country)
+            scoreboard.participants.append(participant)
+            
+            var index = 0
+            for item in countries.filter({__country in return __country != country}) {
+                if index >= marks.count {
+                    break
+                }
+                let voteJury = Vote(From: _country, Value: marks[index], To: Country(name: item), Issuer: .Jury)
+                let votePublic = Vote(From: _country, Value: marks[index], To: Country(name: item), Issuer: .Public)
+                scoreboard.votes.append(voteJury)
+                scoreboard.votes.append(votePublic)
+                index += 1
+            }
+            
         }
     }
-    private func deleteCountries(offsets: IndexSet) {
+    private func deleteCountry(){
         withAnimation {
-            for index in offsets {
-                modelContext.delete(countries[index])
+            if selection != nil {
+                let deletingCountry = scoreboard.countries.first(where: {country in country.name == selection?.name})
+                selection = nil
+                scoreboard.deleteCountry(country: deletingCountry!)
             }
         }
     }
@@ -47,5 +95,5 @@ struct CountriesView: View {
 
 #Preview {
     CountriesView()
-        .modelContainer(for: Country.self, inMemory: true)
+        .environment(Scoreboard())
 }

@@ -7,21 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1ADC872B9A5CF700BB5A17 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1ADC862B9A5CF700BB5A17 /* Scoreboard.swift */; };
+		7F5048332B72A5DC00898173 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5048322B72A5DC00898173 /* OrderView.swift */; };
+		7F53F1802B9A2CD700984E17 /* AnimateNumberText in Frameworks */ = {isa = PBXBuildFile; productRef = 7F53F17F2B9A2CD700984E17 /* AnimateNumberText */; };
+		7F55E96C2B6AC58E009594A4 /* CountryEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F55E96B2B6AC58E009594A4 /* CountryEditor.swift */; };
+		7F8B13F62B97492300AD3D62 /* 0B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F8B13F52B97492300AD3D62 /* 0B.wav */; };
+		7F8B13F92B974D3E00AD3D62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8B13F82B974D3E00AD3D62 /* AVFoundation.framework */; };
+		7F99AE082B77CF78009F7DB8 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99AE072B77CF78009F7DB8 /* Bar.swift */; };
 		7FB3ED492B60DCBB009FB8A0 /* PowerScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED482B60DCBB009FB8A0 /* PowerScoreApp.swift */; };
 		7FB3ED4B2B60DCBB009FB8A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED4A2B60DCBB009FB8A0 /* ContentView.swift */; };
-		7FB3ED4D2B60DCBB009FB8A0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED4C2B60DCBB009FB8A0 /* Item.swift */; };
 		7FB3ED4F2B60DCBC009FB8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3ED4E2B60DCBC009FB8A0 /* Assets.xcassets */; };
 		7FB3ED522B60DCBC009FB8A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3ED512B60DCBC009FB8A0 /* Preview Assets.xcassets */; };
+		7FB3ED5A2B60DDB6009FB8A0 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED592B60DDB6009FB8A0 /* Participant.swift */; };
+		7FB3ED5C2B60DED8009FB8A0 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED5B2B60DED8009FB8A0 /* Vote.swift */; };
+		7FCA84782B73622100675CB4 /* VotingSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA84772B73622100675CB4 /* VotingSceneView.swift */; };
+		7FCA847A2B73674000675CB4 /* ScorePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA84792B73674000675CB4 /* ScorePanel.swift */; };
+		7FCA847C2B7367C600675CB4 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA847B2B7367C600675CB4 /* ScoreKeeper.swift */; };
+		7FDABB012B66BB850079AFE7 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDABB002B66BB850079AFE7 /* Country.swift */; };
+		7FE8D8002B7104B500ECEF9A /* VotingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8D7FF2B7104B500ECEF9A /* VotingView.swift */; };
+		7FE8D8022B711E8A00ECEF9A /* CountryFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8D8012B711E8A00ECEF9A /* CountryFlag.swift */; };
+		7FF1ECDD2B70CBF30009F456 /* ParticipantEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1ECDC2B70CBF30009F456 /* ParticipantEditor.swift */; };
+		7FF1ECDF2B70D10C0009F456 /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1ECDE2B70D10C0009F456 /* ParticipantsView.swift */; };
+		7FF612422B650149004780A0 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF612412B650149004780A0 /* CountriesView.swift */; };
+		7FFBAE042B98D6EC006A979C /* avantgardectt_bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */; };
+		7FFBAE072B98EB96006A979C /* 37.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE062B98EB96006A979C /* 37.wav */; };
+		7FFBAE092B98EBA3006A979C /* 28.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE082B98EBA3006A979C /* 28.wav */; };
+		7FFBAE0B2B98EBB5006A979C /* 6D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE0A2B98EBB5006A979C /* 6D.wav */; };
+		7FFBAE0D2B98EBBF006A979C /* 5A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE0C2B98EBBF006A979C /* 5A.wav */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7FFBAE032B98D6CB006A979C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Font;
+			dstSubfolderSpec = 7;
+			files = (
+				7FFBAE042B98D6EC006A979C /* avantgardectt_bold.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7F1ADC862B9A5CF700BB5A17 /* Scoreboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboard.swift; sourceTree = "<group>"; };
+		7F5048322B72A5DC00898173 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		7F55E96B2B6AC58E009594A4 /* CountryEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEditor.swift; sourceTree = "<group>"; };
+		7F8B13F52B97492300AD3D62 /* 0B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0B.wav; sourceTree = "<group>"; };
+		7F8B13F82B974D3E00AD3D62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7F99AE072B77CF78009F7DB8 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		7FB3ED452B60DCBB009FB8A0 /* PowerScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB3ED482B60DCBB009FB8A0 /* PowerScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerScoreApp.swift; sourceTree = "<group>"; };
 		7FB3ED4A2B60DCBB009FB8A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7FB3ED4C2B60DCBB009FB8A0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7FB3ED4E2B60DCBC009FB8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB3ED512B60DCBC009FB8A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FB3ED532B60DCBC009FB8A0 /* PowerScore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PowerScore.entitlements; sourceTree = "<group>"; };
+		7FB3ED592B60DDB6009FB8A0 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		7FB3ED5B2B60DED8009FB8A0 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		7FCA84772B73622100675CB4 /* VotingSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingSceneView.swift; sourceTree = "<group>"; };
+		7FCA84792B73674000675CB4 /* ScorePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorePanel.swift; sourceTree = "<group>"; };
+		7FCA847B2B7367C600675CB4 /* ScoreKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeeper.swift; sourceTree = "<group>"; };
+		7FDABB002B66BB850079AFE7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7FE8D7FF2B7104B500ECEF9A /* VotingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingView.swift; sourceTree = "<group>"; };
+		7FE8D8012B711E8A00ECEF9A /* CountryFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlag.swift; sourceTree = "<group>"; };
+		7FED94C22B7567B300F49D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7FF1ECDC2B70CBF30009F456 /* ParticipantEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantEditor.swift; sourceTree = "<group>"; };
+		7FF1ECDE2B70D10C0009F456 /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
+		7FF612412B650149004780A0 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = avantgardectt_bold.ttf; sourceTree = "<group>"; };
+		7FFBAE062B98EB96006A979C /* 37.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 37.wav; sourceTree = "<group>"; };
+		7FFBAE082B98EBA3006A979C /* 28.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 28.wav; sourceTree = "<group>"; };
+		7FFBAE0A2B98EBB5006A979C /* 6D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6D.wav; sourceTree = "<group>"; };
+		7FFBAE0C2B98EBBF006A979C /* 5A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5A.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F53F1802B9A2CD700984E17 /* AnimateNumberText in Frameworks */,
+				7F8B13F92B974D3E00AD3D62 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F8B13F72B974D3E00AD3D62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F8B13F82B974D3E00AD3D62 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F9D34112B77EF6100F81BB2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7FB3ED3C2B60DCBB009FB8A0 = {
 			isa = PBXGroup;
 			children = (
 				7FB3ED472B60DCBB009FB8A0 /* PowerScore */,
 				7FB3ED462B60DCBB009FB8A0 /* Products */,
+				7F8B13F72B974D3E00AD3D62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +130,25 @@
 		7FB3ED472B60DCBB009FB8A0 /* PowerScore */ = {
 			isa = PBXGroup;
 			children = (
+				7FFBAE052B98E6CE006A979C /* Music */,
+				7F9D34112B77EF6100F81BB2 /* Font */,
+				7FED94C22B7567B300F49D45 /* Info.plist */,
+				7FE8D8032B71208A00ECEF9A /* Models */,
 				7FB3ED482B60DCBB009FB8A0 /* PowerScoreApp.swift */,
 				7FB3ED4A2B60DCBB009FB8A0 /* ContentView.swift */,
-				7FB3ED4C2B60DCBB009FB8A0 /* Item.swift */,
 				7FB3ED4E2B60DCBC009FB8A0 /* Assets.xcassets */,
 				7FB3ED532B60DCBC009FB8A0 /* PowerScore.entitlements */,
 				7FB3ED502B60DCBC009FB8A0 /* Preview Content */,
+				7FF612412B650149004780A0 /* CountriesView.swift */,
+				7F55E96B2B6AC58E009594A4 /* CountryEditor.swift */,
+				7FF1ECDC2B70CBF30009F456 /* ParticipantEditor.swift */,
+				7FF1ECDE2B70D10C0009F456 /* ParticipantsView.swift */,
+				7FE8D7FF2B7104B500ECEF9A /* VotingView.swift */,
+				7F5048322B72A5DC00898173 /* OrderView.swift */,
+				7FE8D8012B711E8A00ECEF9A /* CountryFlag.swift */,
+				7FCA84772B73622100675CB4 /* VotingSceneView.swift */,
+				7FCA84792B73674000675CB4 /* ScorePanel.swift */,
+				7F99AE072B77CF78009F7DB8 /* Bar.swift */,
 			);
 			path = PowerScore;
 			sourceTree = "<group>";
@@ -72,6 +161,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7FE8D8032B71208A00ECEF9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FCA847B2B7367C600675CB4 /* ScoreKeeper.swift */,
+				7FDABB002B66BB850079AFE7 /* Country.swift */,
+				7FB3ED592B60DDB6009FB8A0 /* Participant.swift */,
+				7FB3ED5B2B60DED8009FB8A0 /* Vote.swift */,
+				7F1ADC862B9A5CF700BB5A17 /* Scoreboard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FFBAE052B98E6CE006A979C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				7FFBAE0C2B98EBBF006A979C /* 5A.wav */,
+				7FFBAE0A2B98EBB5006A979C /* 6D.wav */,
+				7FFBAE082B98EBA3006A979C /* 28.wav */,
+				7FFBAE062B98EB96006A979C /* 37.wav */,
+				7F8B13F52B97492300AD3D62 /* 0B.wav */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,12 +195,16 @@
 				7FB3ED412B60DCBB009FB8A0 /* Sources */,
 				7FB3ED422B60DCBB009FB8A0 /* Frameworks */,
 				7FB3ED432B60DCBB009FB8A0 /* Resources */,
+				7FFBAE032B98D6CB006A979C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PowerScore;
+			packageProductDependencies = (
+				7F53F17F2B9A2CD700984E17 /* AnimateNumberText */,
+			);
 			productName = PowerScore;
 			productReference = 7FB3ED452B60DCBB009FB8A0 /* PowerScore.app */;
 			productType = "com.apple.product-type.application";
@@ -100,7 +217,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					7FB3ED442B60DCBB009FB8A0 = {
 						CreatedOnToolsVersion = 15.2;
@@ -116,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 7FB3ED3C2B60DCBB009FB8A0;
+			packageReferences = (
+				7F25EE562B8A53760042FA93 /* XCRemoteSwiftPackageReference "AnimateNumberText" */,
+			);
 			productRefGroup = 7FB3ED462B60DCBB009FB8A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,6 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFBAE0D2B98EBBF006A979C /* 5A.wav in Resources */,
+				7FFBAE0B2B98EBB5006A979C /* 6D.wav in Resources */,
+				7FFBAE092B98EBA3006A979C /* 28.wav in Resources */,
+				7FFBAE072B98EB96006A979C /* 37.wav in Resources */,
+				7F8B13F62B97492300AD3D62 /* 0B.wav in Resources */,
 				7FB3ED522B60DCBC009FB8A0 /* Preview Assets.xcassets in Resources */,
 				7FB3ED4F2B60DCBC009FB8A0 /* Assets.xcassets in Resources */,
 			);
@@ -143,8 +268,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB3ED4B2B60DCBB009FB8A0 /* ContentView.swift in Sources */,
-				7FB3ED4D2B60DCBB009FB8A0 /* Item.swift in Sources */,
+				7FB3ED5C2B60DED8009FB8A0 /* Vote.swift in Sources */,
+				7FDABB012B66BB850079AFE7 /* Country.swift in Sources */,
+				7FCA847C2B7367C600675CB4 /* ScoreKeeper.swift in Sources */,
+				7FCA84782B73622100675CB4 /* VotingSceneView.swift in Sources */,
 				7FB3ED492B60DCBB009FB8A0 /* PowerScoreApp.swift in Sources */,
+				7FF612422B650149004780A0 /* CountriesView.swift in Sources */,
+				7FF1ECDF2B70D10C0009F456 /* ParticipantsView.swift in Sources */,
+				7F1ADC872B9A5CF700BB5A17 /* Scoreboard.swift in Sources */,
+				7FE8D8002B7104B500ECEF9A /* VotingView.swift in Sources */,
+				7FB3ED5A2B60DDB6009FB8A0 /* Participant.swift in Sources */,
+				7FF1ECDD2B70CBF30009F456 /* ParticipantEditor.swift in Sources */,
+				7FCA847A2B73674000675CB4 /* ScorePanel.swift in Sources */,
+				7F5048332B72A5DC00898173 /* OrderView.swift in Sources */,
+				7F99AE082B77CF78009F7DB8 /* Bar.swift in Sources */,
+				7FE8D8022B711E8A00ECEF9A /* CountryFlag.swift in Sources */,
+				7F55E96C2B6AC58E009594A4 /* CountryEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +324,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -248,6 +388,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -278,18 +419,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerScore/Preview Content\"";
 				DEVELOPMENT_TEAM = PB77JD4FUV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PowerScore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Okså";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Shalyutov.PowerScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -306,18 +451,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerScore/Preview Content\"";
 				DEVELOPMENT_TEAM = PB77JD4FUV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PowerScore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Okså";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Shalyutov.PowerScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -347,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F25EE562B8A53760042FA93 /* XCRemoteSwiftPackageReference "AnimateNumberText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-man/AnimateNumberText";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F53F17F2B9A2CD700984E17 /* AnimateNumberText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F25EE562B8A53760042FA93 /* XCRemoteSwiftPackageReference "AnimateNumberText" */;
+			productName = AnimateNumberText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7FB3ED3D2B60DCBB009FB8A0 /* Project object */;
 }

@@ -6,13 +6,20 @@
 //
 
 import Foundation
-import SwiftData
+import SwiftUI
 
-@Model
-final class Country{
-    var name: String
+@Observable class Country : Equatable, Hashable, Identifiable{
+    public var name: String
     
     init(name: String) {
         self.name = name
+    }
+    
+    static func == (lhs: Country, rhs: Country) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
     }
 }

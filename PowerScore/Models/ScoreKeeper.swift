@@ -6,13 +6,32 @@
 //
 
 import Foundation
+import SwiftData
+import SwiftUI
 
-class ScoreKeeper {
-    public var Participant : Participant
-    public var Score : Int
+@Observable class ScoreKeeper : Equatable, Identifiable, Hashable {
+    static func == (lhs: ScoreKeeper, rhs: ScoreKeeper) -> Bool {
+        return lhs.Country == rhs.Country 
+        && lhs.Score == rhs.Score
+        && lhs.id == rhs.id
+    }
     
-    init(Participant: Participant, Score: Int) {
-        self.Participant = Participant
+    public var Country : Country
+    public var Score : Double
+    public var FromJury : Double = 0
+    public var FromPublic : Double = -1
+    
+    var id: UUID
+    
+    init(Participant: Country, Score: Double) {
+        self.Country = Participant
         self.Score = Score
+        self.id = UUID()
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(Country)
+        hasher.combine(Score)
+        hasher.combine(id)
     }
 }

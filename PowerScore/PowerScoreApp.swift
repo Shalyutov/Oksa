@@ -12,7 +12,7 @@ import SwiftData
 struct PowerScoreApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            //Country.self, Participant.self, Vote.self, VoteOrder.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,10 +23,16 @@ struct PowerScoreApp: App {
         }
     }()
 
+    @State private var scoreboard = Scoreboard(template: true)
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.scoreboard, scoreboard)
         }
-        .modelContainer(sharedModelContainer)
+        Window("Табло", id: "voting") {
+            VotingSceneView()
+                .environment(\.scoreboard, scoreboard)
+        }
     }
 }
