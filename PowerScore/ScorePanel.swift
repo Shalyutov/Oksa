@@ -16,6 +16,17 @@ struct ScorePanel: View {
     @State private var pointsTranslation = 120.0
     @State private var color : Color = .white
     @State private var mark : Double = 0.0
+    @State public var isNationVisible : Bool
+    @State public var max : Double = 15
+    
+    private func getTitle() -> String {
+        if (isNationVisible) {
+            return keeper.Participant.Country.name
+        }
+        else {
+            return keeper.Participant.Song
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -29,9 +40,11 @@ struct ScorePanel: View {
                 }
                 .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             HStack {
-                CountryFlag(name: keeper.Country.name)
-                    .frame(height: 40)
-                Text(keeper.Country.name)
+                if (isNationVisible){
+                    CountryFlag(name: keeper.Participant.Country.name)
+                        .frame(height: 40)
+                }
+                Text(getTitle())
                     .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
                     .font(.custom("AvantGardeCTT", size: 20))
                     .fontWeight(.bold)
@@ -49,7 +62,7 @@ struct ScorePanel: View {
                 Spacer()
                 ZStack {
                     Rectangle()
-                        .fill(mark == 12.0 && !keeper.FromJury.isZero ? .yellow : .cyan)
+                        .fill(mark == max && !keeper.FromJury.isZero ? .yellow : .cyan)
                     Text("\(Int(mark))")
                         .font(.custom("AvantGardeCTT", size: 20))
                         .fontWeight(.bold)
@@ -65,7 +78,7 @@ struct ScorePanel: View {
             }
             
         }
-        .frame(width: 370, height: 40)
+        .frame(width: 430, height: 40)
         .clipped()
         .onChange(of: keeper.FromJury){ old, new in
             if new == 0 {
@@ -112,7 +125,7 @@ struct ScorePanel: View {
     private func background() -> LinearGradient {
         if keeper.FromPublic < 0 {
             if keeper.FromJury >= 0 {
-                if keeper.FromJury == 12 {
+                if keeper.FromJury == max {
                     return LinearGradient(colors: [.yellow], startPoint: UnitPoint(x: CGFloat(-1.0+animateGradient), y: 0), endPoint: UnitPoint(x: CGFloat(2.0+animateGradient), y: 0))
                 }
                 else {
@@ -130,5 +143,13 @@ struct ScorePanel: View {
 }
 
 #Preview {
-    ScorePanel(keeper: ScoreKeeper(Participant: Country(name: "Россия"), Score: 100))
+    ScorePanel(keeper: 
+                ScoreKeeper(
+                    Participant:
+                        Participant(
+                            Number: 0,
+                            Song: "Песня",
+                            Performer: "String",
+                            Country: Country(name: "Россия")), Score: 100), 
+               isNationVisible: false)
 }

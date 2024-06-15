@@ -31,34 +31,50 @@ struct VotingSceneView: View {
             }
             VStack {
                 if keepers.count > 13 && keepers.count < 27 {
-                    LazyHGrid(rows: rows) {
-                        ForEach(keepers) { keeper in
-                            ScorePanel(keeper: keeper)
+                    HStack{
+                        LazyHGrid(rows: rows) {
+                            ForEach(keepers) { keeper in
+                                ScorePanel(keeper: keeper, isNationVisible: scoreboard.isNationVisible)
+                            }
                         }
+                        .frame(height: 600)
+                        HStack{
+                            Text("jijx")
+                        }
+                        .frame(width: 300)
                     }
-                    .frame(height: 600)
+                    
+                    
                 }
                 else {
-                    LazyVGrid(columns: [GridItem(.flexible())]) {
-                        ForEach(keepers, id: \.id) { keeper in
-                            ScorePanel(keeper: keeper)
+                    HStack{
+                        LazyVGrid(columns: [GridItem(.flexible())]) {
+                            ForEach(keepers, id: \.id) { keeper in
+                                ScorePanel(keeper: keeper, isNationVisible: scoreboard.isNationVisible)
+                            }
                         }
+                        HStack{
+                        }
+                        .frame(width: 300)
                     }
                 }
-                if current >= 0 && current < scoreboard.order.count && voting == .Jury {
-                    Text("Сейчас голосует \(scoreboard.order[current].name)")
-                        .font(.custom("AvantGardeCTT", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .padding(16)
+                if (scoreboard.isNationVisible){
+                    if current >= 0 && current < scoreboard.order.count && voting == .Jury {
+                        Text("Сейчас голосует \(scoreboard.order[current].name)")
+                            .font(.custom("AvantGardeCTT", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundStyle(.white)
+                            .padding(16)
+                    }
+                    else if current >= 0 && current < scoreboard.order.count && voting == .Public {
+                        Text("\(publicOrder[current].name) получает баллы от телезрителей")
+                            .font(.custom("AvantGardeCTT", size: 20))
+                            .fontWeight(.bold)
+                            .foregroundStyle(.white)
+                            .padding(16)
+                    }
                 }
-                else if current >= 0 && current < scoreboard.order.count && voting == .Public {
-                    Text("\(publicOrder[current].name) получает баллы от телезрителей")
-                        .font(.custom("AvantGardeCTT", size: 20))
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .padding(16)
-                }
+                
             }
             .onAppear {
                 if !scoreboard.participants.isEmpty {
@@ -101,7 +117,7 @@ struct VotingSceneView: View {
         voting = .Jury
         keepers.removeAll()
         for participant in scoreboard.participants {
-            let keeper = ScoreKeeper(Participant: participant.Country, Score: 0)
+            let keeper = ScoreKeeper(Participant: participant, Score: 0)
             keepers.append(keeper)
         }
         playSound(name: "37")
@@ -124,7 +140,7 @@ struct VotingSceneView: View {
             }
             else if isRemainMarkGiven && !isMainMarkGiven {
                 let keeper = keepers.first(where: { keeper in
-                    return keeper.Country == marks.last?.To
+                    return keeper.Participant.Country == marks.last?.To
                 })
                 keeper!.FromJury += Double(marks.last!.Value)
                 playSound(name: "28")
@@ -136,7 +152,7 @@ struct VotingSceneView: View {
                     return _mark != marks.last!
                 }) {
                     let keeper = keepers.first(where: { keeper in
-                        return keeper.Country == mark.To
+                        return keeper.Participant.Country == mark.To
                     })
                     keeper!.FromJury += Double(mark.Value)
                 }
@@ -150,7 +166,7 @@ struct VotingSceneView: View {
             current -= 1
             playSound(name: "37")
             for keeper in keepers {
-                publicOrder.append(keeper.Country)
+                publicOrder.append(keeper.Participant.Country)
             }
         }
     }
@@ -166,7 +182,7 @@ struct VotingSceneView: View {
                 sum += mark.Value
             }
             let keeper = keepers.first(where: { keeper in
-                return keeper.Country == orderCountry
+                return keeper.Participant.Country == orderCountry
             })
             keeper!.FromPublic = Double(sum)
             current -= 1
@@ -198,5 +214,5 @@ struct VotingSceneView: View {
 
 #Preview {
     VotingSceneView()
-        .environment(Scoreboard())
+        .environment(Scoreboard(template: true))
 }
