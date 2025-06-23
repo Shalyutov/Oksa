@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F01F2FC2DE0F43100217DCA /* avantgarde.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F01F2FB2DE0F43100217DCA /* avantgarde.ttf */; };
+		7F01F2FD2DE0F62200217DCA /* avantgarde.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F01F2FB2DE0F43100217DCA /* avantgarde.ttf */; };
 		7F1ADC872B9A5CF700BB5A17 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1ADC862B9A5CF700BB5A17 /* Scoreboard.swift */; };
 		7F5048332B72A5DC00898173 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5048322B72A5DC00898173 /* OrderView.swift */; };
 		7F53F1802B9A2CD700984E17 /* AnimateNumberText in Frameworks */ = {isa = PBXBuildFile; productRef = 7F53F17F2B9A2CD700984E17 /* AnimateNumberText */; };
 		7F55E96C2B6AC58E009594A4 /* CountryEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F55E96B2B6AC58E009594A4 /* CountryEditor.swift */; };
-		7F8B13F62B97492300AD3D62 /* 0B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F8B13F52B97492300AD3D62 /* 0B.wav */; };
+		7F8775402DC6929A0002D241 /* highscore.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F8775392DC6929A0002D241 /* highscore.wav */; };
+		7F8775412DC6929A0002D241 /* mark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753B2DC6929A0002D241 /* mark.wav */; };
+		7F8775422DC6929A0002D241 /* score.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753C2DC6929A0002D241 /* score.wav */; };
+		7F8775432DC6929A0002D241 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753E2DC6929A0002D241 /* start.wav */; };
+		7F8775442DC6929A0002D241 /* highmark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F8775382DC6929A0002D241 /* highmark.wav */; };
+		7F8775452DC6929A0002D241 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753F2DC6929A0002D241 /* win.wav */; };
+		7F8775462DC6929A0002D241 /* sort.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753D2DC6929A0002D241 /* sort.wav */; };
+		7F8775472DC6929A0002D241 /* leader.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F87753A2DC6929A0002D241 /* leader.wav */; };
 		7F8B13F92B974D3E00AD3D62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8B13F82B974D3E00AD3D62 /* AVFoundation.framework */; };
 		7F99AE082B77CF78009F7DB8 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99AE072B77CF78009F7DB8 /* Bar.swift */; };
 		7FB3ED492B60DCBB009FB8A0 /* PowerScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED482B60DCBB009FB8A0 /* PowerScoreApp.swift */; };
@@ -20,6 +29,9 @@
 		7FB3ED522B60DCBC009FB8A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3ED512B60DCBC009FB8A0 /* Preview Assets.xcassets */; };
 		7FB3ED5A2B60DDB6009FB8A0 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED592B60DDB6009FB8A0 /* Participant.swift */; };
 		7FB3ED5C2B60DED8009FB8A0 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3ED5B2B60DED8009FB8A0 /* Vote.swift */; };
+		7FB622DA2DE21E6200AF0404 /* to_televote.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FB622D92DE21E6200AF0404 /* to_televote.wav */; };
+		7FB622DB2DE21E6200AF0404 /* mark2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FB622D72DE21E6200AF0404 /* mark2.wav */; };
+		7FB622DC2DE21E6200AF0404 /* score2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FB622D82DE21E6200AF0404 /* score2.wav */; };
 		7FCA84782B73622100675CB4 /* VotingSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA84772B73622100675CB4 /* VotingSceneView.swift */; };
 		7FCA847A2B73674000675CB4 /* ScorePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA84792B73674000675CB4 /* ScorePanel.swift */; };
 		7FCA847C2B7367C600675CB4 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCA847B2B7367C600675CB4 /* ScoreKeeper.swift */; };
@@ -30,10 +42,6 @@
 		7FF1ECDF2B70D10C0009F456 /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1ECDE2B70D10C0009F456 /* ParticipantsView.swift */; };
 		7FF612422B650149004780A0 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF612412B650149004780A0 /* CountriesView.swift */; };
 		7FFBAE042B98D6EC006A979C /* avantgardectt_bold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */; };
-		7FFBAE072B98EB96006A979C /* 37.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE062B98EB96006A979C /* 37.wav */; };
-		7FFBAE092B98EBA3006A979C /* 28.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE082B98EBA3006A979C /* 28.wav */; };
-		7FFBAE0B2B98EBB5006A979C /* 6D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE0A2B98EBB5006A979C /* 6D.wav */; };
-		7FFBAE0D2B98EBBF006A979C /* 5A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7FFBAE0C2B98EBBF006A979C /* 5A.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +51,7 @@
 			dstPath = Font;
 			dstSubfolderSpec = 7;
 			files = (
+				7F01F2FD2DE0F62200217DCA /* avantgarde.ttf in CopyFiles */,
 				7FFBAE042B98D6EC006A979C /* avantgardectt_bold.ttf in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,10 +59,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F01F2FB2DE0F43100217DCA /* avantgarde.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = avantgarde.ttf; sourceTree = "<group>"; };
 		7F1ADC862B9A5CF700BB5A17 /* Scoreboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboard.swift; sourceTree = "<group>"; };
 		7F5048322B72A5DC00898173 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		7F55E96B2B6AC58E009594A4 /* CountryEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEditor.swift; sourceTree = "<group>"; };
-		7F8B13F52B97492300AD3D62 /* 0B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0B.wav; sourceTree = "<group>"; };
+		7F8775382DC6929A0002D241 /* highmark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highmark.wav; sourceTree = "<group>"; };
+		7F8775392DC6929A0002D241 /* highscore.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highscore.wav; sourceTree = "<group>"; };
+		7F87753A2DC6929A0002D241 /* leader.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = leader.wav; sourceTree = "<group>"; };
+		7F87753B2DC6929A0002D241 /* mark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mark.wav; sourceTree = "<group>"; };
+		7F87753C2DC6929A0002D241 /* score.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = score.wav; sourceTree = "<group>"; };
+		7F87753D2DC6929A0002D241 /* sort.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sort.wav; sourceTree = "<group>"; };
+		7F87753E2DC6929A0002D241 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
+		7F87753F2DC6929A0002D241 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		7F8B13F82B974D3E00AD3D62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7F99AE072B77CF78009F7DB8 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		7FB3ED452B60DCBB009FB8A0 /* PowerScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +81,9 @@
 		7FB3ED532B60DCBC009FB8A0 /* PowerScore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PowerScore.entitlements; sourceTree = "<group>"; };
 		7FB3ED592B60DDB6009FB8A0 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		7FB3ED5B2B60DED8009FB8A0 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		7FB622D72DE21E6200AF0404 /* mark2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mark2.wav; sourceTree = "<group>"; };
+		7FB622D82DE21E6200AF0404 /* score2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = score2.wav; sourceTree = "<group>"; };
+		7FB622D92DE21E6200AF0404 /* to_televote.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = to_televote.wav; sourceTree = "<group>"; };
 		7FCA84772B73622100675CB4 /* VotingSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingSceneView.swift; sourceTree = "<group>"; };
 		7FCA84792B73674000675CB4 /* ScorePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorePanel.swift; sourceTree = "<group>"; };
 		7FCA847B2B7367C600675CB4 /* ScoreKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeeper.swift; sourceTree = "<group>"; };
@@ -75,10 +95,6 @@
 		7FF1ECDE2B70D10C0009F456 /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		7FF612412B650149004780A0 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
 		7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = avantgardectt_bold.ttf; sourceTree = "<group>"; };
-		7FFBAE062B98EB96006A979C /* 37.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 37.wav; sourceTree = "<group>"; };
-		7FFBAE082B98EBA3006A979C /* 28.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 28.wav; sourceTree = "<group>"; };
-		7FFBAE0A2B98EBB5006A979C /* 6D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6D.wav; sourceTree = "<group>"; };
-		7FFBAE0C2B98EBBF006A979C /* 5A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5A.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +121,7 @@
 		7F9D34112B77EF6100F81BB2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				7F01F2FB2DE0F43100217DCA /* avantgarde.ttf */,
 				7FFBAE022B98D6C2006A979C /* avantgardectt_bold.ttf */,
 			);
 			path = Font;
@@ -176,11 +193,17 @@
 		7FFBAE052B98E6CE006A979C /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				7FFBAE0C2B98EBBF006A979C /* 5A.wav */,
-				7FFBAE0A2B98EBB5006A979C /* 6D.wav */,
-				7FFBAE082B98EBA3006A979C /* 28.wav */,
-				7FFBAE062B98EB96006A979C /* 37.wav */,
-				7F8B13F52B97492300AD3D62 /* 0B.wav */,
+				7FB622D72DE21E6200AF0404 /* mark2.wav */,
+				7FB622D82DE21E6200AF0404 /* score2.wav */,
+				7FB622D92DE21E6200AF0404 /* to_televote.wav */,
+				7F8775382DC6929A0002D241 /* highmark.wav */,
+				7F8775392DC6929A0002D241 /* highscore.wav */,
+				7F87753A2DC6929A0002D241 /* leader.wav */,
+				7F87753B2DC6929A0002D241 /* mark.wav */,
+				7F87753C2DC6929A0002D241 /* score.wav */,
+				7F87753D2DC6929A0002D241 /* sort.wav */,
+				7F87753E2DC6929A0002D241 /* start.wav */,
+				7F87753F2DC6929A0002D241 /* win.wav */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -250,13 +273,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FFBAE0D2B98EBBF006A979C /* 5A.wav in Resources */,
-				7FFBAE0B2B98EBB5006A979C /* 6D.wav in Resources */,
-				7FFBAE092B98EBA3006A979C /* 28.wav in Resources */,
-				7FFBAE072B98EB96006A979C /* 37.wav in Resources */,
-				7F8B13F62B97492300AD3D62 /* 0B.wav in Resources */,
+				7F8775402DC6929A0002D241 /* highscore.wav in Resources */,
+				7F8775412DC6929A0002D241 /* mark.wav in Resources */,
+				7F8775422DC6929A0002D241 /* score.wav in Resources */,
+				7F8775432DC6929A0002D241 /* start.wav in Resources */,
+				7F8775442DC6929A0002D241 /* highmark.wav in Resources */,
+				7F8775452DC6929A0002D241 /* win.wav in Resources */,
+				7F01F2FC2DE0F43100217DCA /* avantgarde.ttf in Resources */,
+				7F8775462DC6929A0002D241 /* sort.wav in Resources */,
+				7F8775472DC6929A0002D241 /* leader.wav in Resources */,
 				7FB3ED522B60DCBC009FB8A0 /* Preview Assets.xcassets in Resources */,
 				7FB3ED4F2B60DCBC009FB8A0 /* Assets.xcassets in Resources */,
+				7FB622DA2DE21E6200AF0404 /* to_televote.wav in Resources */,
+				7FB622DB2DE21E6200AF0404 /* mark2.wav in Resources */,
+				7FB622DC2DE21E6200AF0404 /* score2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PowerScore/PowerScore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -433,8 +464,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
-				MARKETING_VERSION = 0.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Shalyutov.PowerScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -447,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PowerScore/PowerScore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -465,8 +497,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
-				MARKETING_VERSION = 0.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Shalyutov.PowerScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

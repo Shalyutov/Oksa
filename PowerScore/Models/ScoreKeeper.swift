@@ -17,7 +17,7 @@ import SwiftUI
     }
     
     public var Participant : Participant
-    public var Score : Double
+    public var Score : Double = 0.0
     public var FromJury : Double = 0
     public var FromPublic : Double = -1
     

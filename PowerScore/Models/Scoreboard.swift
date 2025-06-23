@@ -64,49 +64,68 @@ import SwiftUI
         self.isNationVisible = isNationVisible
     }
     public static func Aurora() -> Scoreboard {
-        let marks = [15, 12, 10, 8, 6, 4, 2]
-        let countries = [Country(name: "Андрей"), Country(name: "Максим"), Country(name: "Алексей"), Country(name: "Jury A"), Country(name: "Jury B"), Country(name: "Jury C"), Country(name: "Jury D"), Country(name: "Jury E")]
+        let marks = [15, 11, 9, 7, 5, 3, 1]
+        let countries = [
+            Country(name: "Jury A"),
+            Country(name: "Jury B"),
+            Country(name: "Jury C"),
+            Country(name: "Jury D"),
+            Country(name: "Jury E"),
+            Country(name: "Jury F"),
+            Country(name: "Jury G"),
+            Country(name: "Jury H"),
+            Country(name: "Jury I"),
+            Country(name: "Jury J"),
+        ]
         let participants = [
-            Participant(Number: 0, Song: "Happy That You Find Me", Performer: "Danny Saucedo", Country: countries[0]),
-            Participant(Number: 1, Song: "Sinceramente", Performer: "Annalisa", Country: countries[3]),
-            Participant(Number: 2, Song: "I Don't Wanna Wait", Performer: "OneRepublic & David Guetta", Country: countries[4]),
-            Participant(Number: 3, Song: "(It Goes Like) Nanana", Performer: "Peggy Gou", Country: countries[2]),
-            Participant(Number: 4, Song: "Ева", Performer: "Винтаж", Country: countries[1]),
-            Participant(Number: 5, Song: "Sweaters", Performer: "Blanks", Country: countries[5]),
-            Participant(Number: 6, Song: "Hold Me Closer", Performer: "Cornelia Jacobs", Country: countries[6]),
-            Participant(Number: 7, Song: "Damdiggida", Performer: "KEiiNO", Country: countries[7])
-            ]
+            Participant(Number: 0, Song: "Heaven Hates Me", Performer: "Gregory Dillon", Country: countries[0]),
+            Participant(Number: 1, Song: "Show Me What Love Is", Performer: "Erik Segerstedt", Country: countries[1]),
+            Participant(Number: 2, Song: "Unforgettable", Performer: "Marcus & Martinus", Country: countries[2]),
+            Participant(Number: 3, Song: "Home Without a Heart", Performer: "Blanks", Country: countries[3]),
+            Participant(Number: 4, Song: "Drunk Groove", Performer: "MARUV & BOOSIN", Country: countries[4]),
+            Participant(Number: 5, Song: "Homay", Performer: "AY YOLA", Country: countries[5]),
+            Participant(Number: 6, Song: "Revolution", Performer: "Måns Zermerlow", Country: countries[6]),
+            Participant(Number: 7, Song: "San Francisco Boy", Performer: "Hooja & Käärijä", Country: countries[7]),
+            Participant(Number: 8, Song: "Baller", Performer: "Abor & Tynna", Country: countries[8]),
+            Participant(Number: 9, Song: "140", Performer: "IOWA", Country: countries[9])
+        ]
         var votes : [Vote] = []
         let juries : [[Int]] = [
-            [1, 4, 3, 6, 5, 7, 2], //Андрей
-            [3, 2, 5, 0, 7, 6, 1], //Максим
-            [4, 6, 5, 1, 2, 0, 7], //A
-            [3, 4, 2, 0, 7, 6, 5], //B
-            [0, 6, 1, 4, 3, 5, 7], //C
-            [1, 6, 4, 3, 0, 2, 7], //D
-            [4, 3, 5, 7, 1, 2, 0], //E
-            [3, 2, 0, 1, 4, 5, 6]  //F
+            [10, 9, 6, 1, 3, 7, 2],
+            [9, 7, 8, 5, 2, 1, 4],
+            [7, 8, 4, 5, 9, 6, 3],
+            [7, 1, 2, 4, 6, 9, 10],
+            [7, 1, 3, 10, 5, 6, 4],
+            [2, 1, 7, 5, 3, 9, 10],
+            [1, 10, 5, 8, 6, 7, 2],
+            [4, 5, 8, 9, 2, 3, 10],
+            [5, 10, 9, 2, 1 ,4, 8],
+            [5, 2, 10, 1, 4, 8, 9],
         ]
         
         var j = 0
         for jury in juries {
             var r = 0
             for rate in jury {
-                votes.append(Vote(From: countries[j], Value: marks[r], To: participants[rate].Country, Issuer: VoteIssuer.Jury))
+                votes.append(Vote(From: countries[j], Value: marks[r], To: participants[rate-1].Country, Issuer: VoteIssuer.Jury))
                 r += 1
             }
             j += 1
         }
         
-        votes.append(Vote(From: countries[2], Value: 6, To: participants[0].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 73, To: participants[1].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 1, To: participants[2].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 122, To: participants[3].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 228, To: participants[4].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 7, To: participants[5].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 9, To: participants[6].Country, Issuer: VoteIssuer.Public))
-        votes.append(Vote(From: countries[2], Value: 6, To: participants[7].Country, Issuer: VoteIssuer.Public))
-        return Scoreboard(countries: countries, participants: participants, votes: votes, order: countries, marks: marks, isNationVisible: false)
+        let publicVotes : [Int] = [10, 20, 30, 40, 250, 80, 100, 200, 100, 20]
+        var index : Int = 0
+        for participant in participants {
+            votes.append(Vote(From: countries[0], Value: publicVotes[index], To: participant.Country, Issuer: VoteIssuer.Public))
+            index += 1
+        }
+        
+        return Scoreboard(countries: countries,
+                          participants: participants,
+                          votes: votes,
+                          order: countries,
+                          marks: marks,
+                          isNationVisible: false)
     }
     
     public func deleteCountry(country: Country) {
